@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.7.35 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.7.48 {:static-fns true, :optimize-constants true}
 goog.provide('cljs.source_map.base64_vlq');
 goog.require('cljs.core');
 goog.require('clojure.string');
@@ -27,20 +27,20 @@ return shifted;
 cljs.source_map.base64_vlq.encode_val = (function cljs$source_map$base64_vlq$encode_val(n){
 var sb = (new goog.string.StringBuffer());
 var vlq = cljs.source_map.base64_vlq.to_vlq_signed(n);
-var digit_12143 = (vlq & cljs.source_map.base64_vlq.vlq_base_mask);
-var vlq_12144__$1 = (vlq >>> cljs.source_map.base64_vlq.vlq_base_shift);
+var digit_12195 = (vlq & cljs.source_map.base64_vlq.vlq_base_mask);
+var vlq_12196__$1 = (vlq >>> cljs.source_map.base64_vlq.vlq_base_shift);
 while(true){
-if((vlq_12144__$1 > (0))){
-var digit_12145__$1 = (digit_12143 | cljs.source_map.base64_vlq.vlq_continuation_bit);
-sb.append(cljs.source_map.base64.encode(digit_12145__$1));
+if((vlq_12196__$1 > (0))){
+var digit_12197__$1 = (digit_12195 | cljs.source_map.base64_vlq.vlq_continuation_bit);
+sb.append(cljs.source_map.base64.encode(digit_12197__$1));
 
-var G__12146 = (vlq_12144__$1 & cljs.source_map.base64_vlq.vlq_base_mask);
-var G__12147 = (vlq_12144__$1 >>> cljs.source_map.base64_vlq.vlq_base_shift);
-digit_12143 = G__12146;
-vlq_12144__$1 = G__12147;
+var G__12198 = (vlq_12196__$1 & cljs.source_map.base64_vlq.vlq_base_mask);
+var G__12199 = (vlq_12196__$1 >>> cljs.source_map.base64_vlq.vlq_base_shift);
+digit_12195 = G__12198;
+vlq_12196__$1 = G__12199;
 continue;
 } else {
-sb.append(cljs.source_map.base64.encode(digit_12143));
+sb.append(cljs.source_map.base64.encode(digit_12195));
 }
 break;
 }
@@ -68,12 +68,12 @@ var digit__$1 = (digit & cljs.source_map.base64_vlq.vlq_base_mask);
 var result__$1 = (result + (digit__$1 << shift));
 var shift__$1 = (shift + cljs.source_map.base64_vlq.vlq_base_shift);
 if(continuation_QMARK_){
-var G__12148 = i__$1;
-var G__12149 = result__$1;
-var G__12150 = shift__$1;
-i = G__12148;
-result = G__12149;
-shift = G__12150;
+var G__12200 = i__$1;
+var G__12201 = result__$1;
+var G__12202 = shift__$1;
+i = G__12200;
+result = G__12201;
+shift = G__12202;
 continue;
 } else {
 return (new cljs.core.LazySeq(null,((function (i,result,shift,i__$1,continuation_QMARK_,digit__$1,result__$1,shift__$1,digit,l){

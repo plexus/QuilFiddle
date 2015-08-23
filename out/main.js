@@ -1,7 +1,4 @@
 goog.addDependency("base.js", ['goog'], []);
-goog.addDependency("../codemirror.inc.js", ['cljsjs.codemirror'], []);
-goog.addDependency("../show-hint.js", ['cljsjs.codemirror.addons.showhint'], ['cljsjs.codemirror']);
-goog.addDependency("../matchbrackets.js", ['cljsjs.codemirror.addons.matchbrackets'], ['cljsjs.codemirror']);
 goog.addDependency("../cljs/core.js", ['cljs.core'], ['goog.string', 'goog.object', 'goog.string.StringBuffer', 'goog.array']);
 goog.addDependency("../constants_table.js", ['constants_table'], ['cljs.core']);
 goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer', 'constants_table']);
@@ -21,8 +18,9 @@ goog.addDependency("../cljs/compiler.js", ['cljs.compiler'], ['cljs.tools.reader
 goog.addDependency("../clojure/walk.js", ['clojure.walk'], ['cljs.core', 'constants_table']);
 goog.addDependency("../cljs/core$macros.js", ['cljs.core$macros'], ['cljs.compiler', 'cljs.core', 'cljs.env', 'clojure.set', 'constants_table', 'cljs.analyzer', 'clojure.walk']);
 goog.addDependency("../cljs/js.js", ['cljs.js'], ['cljs.compiler', 'cljs.tools.reader', 'cljs.core', 'goog.crypt.base64', 'cljs.tools.reader.reader_types', 'cljs.env', 'goog.string.StringBuffer', 'cljs.tagged_literals', 'constants_table', 'cljs.analyzer', 'cljs.source_map', 'clojure.string', 'cljs.core$macros']);
+goog.addDependency("../codemirror.inc.js", ['cljsjs.codemirror'], []);
+goog.addDependency("../anyword-hint.inc.js", ['cljsjs.codemirror.addon.hint.anyword_hint'], ['cljsjs.codemirror']);
 goog.addDependency("../cljs/pprint.js", ['cljs.pprint'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer', 'constants_table', 'clojure.string']);
-goog.addDependency("../closebrackets.js", ['cljsjs.codemirror.addons.closebrackets'], ['cljsjs.codemirror']);
 goog.addDependency("../processing.js", ['org.processingjs.Processing'], []);
 goog.addDependency("../quil/middlewares/deprecated_options.js", ['quil.middlewares.deprecated_options'], ['cljs.core', 'constants_table']);
 goog.addDependency("../quil/util.js", ['quil.util'], ['cljs.core', 'constants_table', 'clojure.string']);
@@ -33,5 +31,8 @@ goog.addDependency("../quil/middlewares/navigation_2d.js", ['quil.middlewares.na
 goog.addDependency("../quil/middlewares/fun_mode.js", ['quil.middlewares.fun_mode'], ['cljs.core', 'quil.core', 'constants_table']);
 goog.addDependency("../quil/middleware.js", ['quil.middleware'], ['cljs.core', 'quil.middlewares.navigation_3d', 'quil.middlewares.navigation_2d', 'constants_table', 'quil.middlewares.fun_mode']);
 goog.addDependency("../clojure.inc.js", ['cljsjs.codemirror.mode.clojure'], ['cljsjs.codemirror']);
-goog.addDependency("../anyword-hint.js", ['cljsjs.codemirror.addons.anywordhint'], ['cljsjs.codemirror']);
-goog.addDependency("../quilfiddle/core.js", ['quilfiddle.core'], ['cljsjs.codemirror.addons.showhint', 'cljsjs.codemirror.addons.matchbrackets', 'cljs.tools.reader', 'cljs.js', 'cljs.core', 'cljs.pprint', 'cljsjs.codemirror.addons.closebrackets', 'quil.core', 'quil.middleware', 'cljsjs.codemirror.mode.clojure', 'constants_table', 'cljsjs.codemirror.addons.anywordhint']);
+goog.addDependency("../show-hint.inc.js", ['cljsjs.codemirror.addon.hint.show_hint'], ['cljsjs.codemirror']);
+goog.addDependency("../matchbrackets.inc.js", ['cljsjs.codemirror.addon.edit.matchbrackets'], ['cljsjs.codemirror']);
+goog.addDependency("../quilfiddle/clojuremirror.js", ['quilfiddle.clojuremirror'], ['cljs.core', 'constants_table']);
+goog.addDependency("../closebrackets.inc.js", ['cljsjs.codemirror.addon.edit.closebrackets'], ['cljsjs.codemirror']);
+goog.addDependency("../quilfiddle/core.js", ['quilfiddle.core'], ['cljs.tools.reader', 'cljs.js', 'cljs.core', 'cljsjs.codemirror.addon.hint.anyword_hint', 'cljs.pprint', 'quil.core', 'quil.middleware', 'cljsjs.codemirror.mode.clojure', 'constants_table', 'cljsjs.codemirror.addon.hint.show_hint', 'cljsjs.codemirror.addon.edit.matchbrackets', 'quilfiddle.clojuremirror', 'cljsjs.codemirror.addon.edit.closebrackets']);

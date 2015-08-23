@@ -1,12 +1,13 @@
 (ns quilfiddle.core
-  (:require [cljs.pprint :refer [pprint]]
+  (:require [quilfiddle.clojuremirror :as c]
+            [cljs.pprint :refer [pprint]]
             [cljs.js :as cljs]
             [cljs.tools.reader :as r]
             [cljsjs.codemirror.mode.clojure]
-            [cljsjs.codemirror.addons.matchbrackets]
-            [cljsjs.codemirror.addons.anywordhint]
-            [cljsjs.codemirror.addons.closebrackets]
-            [cljsjs.codemirror.addons.showhint]
+            [cljsjs.codemirror.addon.edit.matchbrackets]
+            [cljsjs.codemirror.addon.edit.closebrackets]
+            [cljsjs.codemirror.addon.hint.show-hint]
+            [cljsjs.codemirror.addon.hint.anyword-hint]
             [quil.core]
             [quil.middleware]))
 
@@ -104,6 +105,7 @@
                #js {:value default-code
                     :mode "clojure"
                     :extraKeys #js {:Cmd-Enter #(eval-sexp %)
+                                    :Ctrl-Enter #(eval-sexp %)
                                     :Tab "autocomplete"}
                     ;:lineNumbers true
                     :gutters #js ["CodeMirror-linenumbers"]

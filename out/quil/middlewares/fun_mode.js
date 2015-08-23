@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.7.35 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.7.48 {:static-fns true, :optimize-constants true}
 goog.provide('quil.middlewares.fun_mode');
 goog.require('cljs.core');
 goog.require('quil.core');
@@ -8,9 +8,9 @@ return null;
 }));
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(options,cljs.core.cst$kw$setup,((function (setup){
 return (function (){
-var G__14884 = quil.core.state_atom();
-var G__14885 = (setup.cljs$core$IFn$_invoke$arity$0 ? setup.cljs$core$IFn$_invoke$arity$0() : setup.call(null));
-return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__14884,G__14885) : cljs.core.reset_BANG_.call(null,G__14884,G__14885));
+var G__14939 = quil.core.state_atom();
+var G__14940 = (setup.cljs$core$IFn$_invoke$arity$0 ? setup.cljs$core$IFn$_invoke$arity$0() : setup.call(null));
+return (cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2 ? cljs.core.reset_BANG_.cljs$core$IFn$_invoke$arity$2(G__14939,G__14940) : cljs.core.reset_BANG_.call(null,G__14939,G__14940));
 });})(setup))
 );
 });
@@ -21,8 +21,8 @@ return null;
 var update = cljs.core.cst$kw$update.cljs$core$IFn$_invoke$arity$2(options,cljs.core.identity);
 var quil_draw = ((function (draw,update){
 return (function (){
-var G__14887 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(quil.core.state_atom(),((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(quil.core.frame_count(),(1)))?cljs.core.identity:update));
-return (draw.cljs$core$IFn$_invoke$arity$1 ? draw.cljs$core$IFn$_invoke$arity$1(G__14887) : draw.call(null,G__14887));
+var G__14942 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(quil.core.state_atom(),((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(quil.core.frame_count(),(1)))?cljs.core.identity:update));
+return (draw.cljs$core$IFn$_invoke$arity$1 ? draw.cljs$core$IFn$_invoke$arity$1(G__14942) : draw.call(null,G__14942));
 });})(draw,update))
 ;
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(options,cljs.core.cst$kw$update),cljs.core.cst$kw$draw,quil_draw);
@@ -37,23 +37,23 @@ quil.middlewares.fun_mode.key_event = (function quil$middlewares$fun_mode$key_ev
 return new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$key,quil.core.key_as_keyword(),cljs.core.cst$kw$key_DASH_code,quil.core.key_code(),cljs.core.cst$kw$raw_DASH_key,quil.core.raw_key()], null);
 });
 quil.middlewares.fun_mode.wrap_handler = (function quil$middlewares$fun_mode$wrap_handler(){
-var args14888 = [];
-var len__5537__auto___14891 = arguments.length;
-var i__5538__auto___14892 = (0);
+var args14943 = [];
+var len__5565__auto___14946 = arguments.length;
+var i__5566__auto___14947 = (0);
 while(true){
-if((i__5538__auto___14892 < len__5537__auto___14891)){
-args14888.push((arguments[i__5538__auto___14892]));
+if((i__5566__auto___14947 < len__5565__auto___14946)){
+args14943.push((arguments[i__5566__auto___14947]));
 
-var G__14893 = (i__5538__auto___14892 + (1));
-i__5538__auto___14892 = G__14893;
+var G__14948 = (i__5566__auto___14947 + (1));
+i__5566__auto___14947 = G__14948;
 continue;
 } else {
 }
 break;
 }
 
-var G__14890 = args14888.length;
-switch (G__14890) {
+var G__14945 = args14943.length;
+switch (G__14945) {
 case 2:
 return quil.middlewares.fun_mode.wrap_handler.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -63,7 +63,7 @@ return quil.middlewares.fun_mode.wrap_handler.cljs$core$IFn$_invoke$arity$3((arg
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args14888.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args14943.length)].join('')));
 
 }
 });
@@ -92,23 +92,23 @@ return options;
 
 quil.middlewares.fun_mode.wrap_handler.cljs$lang$maxFixedArity = 3;
 quil.middlewares.fun_mode.wrap_handlers = (function quil$middlewares$fun_mode$wrap_handlers(){
-var args__5544__auto__ = [];
-var len__5537__auto___14897 = arguments.length;
-var i__5538__auto___14898 = (0);
+var args__5572__auto__ = [];
+var len__5565__auto___14952 = arguments.length;
+var i__5566__auto___14953 = (0);
 while(true){
-if((i__5538__auto___14898 < len__5537__auto___14897)){
-args__5544__auto__.push((arguments[i__5538__auto___14898]));
+if((i__5566__auto___14953 < len__5565__auto___14952)){
+args__5572__auto__.push((arguments[i__5566__auto___14953]));
 
-var G__14899 = (i__5538__auto___14898 + (1));
-i__5538__auto___14898 = G__14899;
+var G__14954 = (i__5566__auto___14953 + (1));
+i__5566__auto___14953 = G__14954;
 continue;
 } else {
 }
 break;
 }
 
-var argseq__5545__auto__ = ((((1) < args__5544__auto__.length))?(new cljs.core.IndexedSeq(args__5544__auto__.slice((1)),(0))):null);
-return quil.middlewares.fun_mode.wrap_handlers.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__5545__auto__);
+var argseq__5573__auto__ = ((((1) < args__5572__auto__.length))?(new cljs.core.IndexedSeq(args__5572__auto__.slice((1)),(0))):null);
+return quil.middlewares.fun_mode.wrap_handlers.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__5573__auto__);
 });
 
 quil.middlewares.fun_mode.wrap_handlers.cljs$core$IFn$_invoke$arity$variadic = (function (options,handlers){
@@ -123,10 +123,10 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(quil.middlewares.fun_mode.w
 
 quil.middlewares.fun_mode.wrap_handlers.cljs$lang$maxFixedArity = (1);
 
-quil.middlewares.fun_mode.wrap_handlers.cljs$lang$applyTo = (function (seq14895){
-var G__14896 = cljs.core.first(seq14895);
-var seq14895__$1 = cljs.core.next(seq14895);
-return quil.middlewares.fun_mode.wrap_handlers.cljs$core$IFn$_invoke$arity$variadic(G__14896,seq14895__$1);
+quil.middlewares.fun_mode.wrap_handlers.cljs$lang$applyTo = (function (seq14950){
+var G__14951 = cljs.core.first(seq14950);
+var seq14950__$1 = cljs.core.next(seq14950);
+return quil.middlewares.fun_mode.wrap_handlers.cljs$core$IFn$_invoke$arity$variadic(G__14951,seq14950__$1);
 });
 quil.middlewares.fun_mode.wrap_mouse_wheel = (function quil$middlewares$fun_mode$wrap_mouse_wheel(options){
 var temp__4423__auto__ = cljs.core.cst$kw$mouse_DASH_wheel.cljs$core$IFn$_invoke$arity$1(options);
